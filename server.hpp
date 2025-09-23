@@ -44,4 +44,6 @@ class Server
 		~Server();
 		void startServer();
 		void startLoop();
+		void newClient();
+		void handleMessage(int index);
 };

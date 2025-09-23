@@ -1,5 +1,10 @@
 #include "server.hpp"
 
+void Server::newClient()
+{
+	int client_fd = accept(serverFd, ())
+}
+
 void Server::startLoop()
 {
 	for (;;)
@@ -16,7 +21,11 @@ void Server::startLoop()
 			{
 				if (poll_fds[i].fd == server_fd)
 				{
-					
+					newClient();
+				}
+				else
+				{
+					handleMessage(i);
 				}
 			}
 		}
